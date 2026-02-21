@@ -96,15 +96,15 @@ node server.js
 > Make sure these images are inside your project folder.
 
 #### 🏠 Home Page  
-![Home Page](home.png)
+![Home Page](images/home.png.png)
 Displays the main landing page where users can navigate to report or adoption sections.
 
 #### 📝 Rescue Report Page  
-![Rescue Report](animal-rescue.png)  
+![Rescue Report](images/animal-rescue.png.png)  
 Allows users to submit details about injured or abused stray dogs with location and image upload.
 
 #### 🔐 Admin Page  
-![Admin Page](admin.png)  
+![Admin Page](/images/admin.png.png)  
 Admin dashboard for managing rescue reports and updating case status.
 
 ---
