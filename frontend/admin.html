@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if(localStorage.getItem("admin")!=="true"){
+      location.href="admin-login.html";
+    }
+  </script>
+</head>
+<body>
+  <header style="color: white;">⚙️ Admin Management Panel</header>
+  <nav>
+    <a href="index.html"><button>Home</button></a>
+    <button onclick="logout()" style="background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);">🚪 Logout</button>
+  </nav>
+
+  <div class="container">
+    <div class="card" style="color: white;">
+      <h3 style="color: white; border-bottom: 2px solid #ffd60a;">📋 Rescue Reports</h3>
+      <ul id="adminReports" style="margin-top: 15px;"></ul>
+    </div>
+
+    
+
+  <!-- Report Details Modal -->
+  <div id="reportModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeReportModal()">&times;</span>
+      <h2 id="modalTitle">Report Details</h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function logout() {
+      if(confirm('Are you sure you want to logout?')) {
+        localStorage.removeItem("admin");
+        location.href="index.html";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt Rescued Dogs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>🏡 Adopt Rescued Dogs 🐕</header>
+  <nav>
+    <a href="index.html"><button>Home</button></a>
+    <a href="report.html"><button>Report Injured Dog</button></a>
+    <a href="ngos.html"><button>NGOs</button></a>
+    <a href="admin-login.html"><button>Admin Login</button></a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h3>Available Rescued Dogs</h3>
+      <select id="dogSelect" style="padding: 12px 15px; font-size: 16px; font-weight: bold;">
+        <option>Select a dog...</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <h3>Adoption Application</h3>
+      <form id="adoptForm">
+        <input id="adopterName" placeholder="Your Full Name" required>
+        <input id="adopterEmail" type="email" placeholder="Your Email" required>
+        <input id="adopterPhone" type="tel" placeholder="Your Phone Number" required>
+        
+        <textarea id="adoptDetails" placeholder="Tell us why you want to adopt this dog and about your home..." required></textarea>
+        
+        <label style="font-weight: bold; color: white;">📸 Your Photo (Optional):</label>
+        <input 
+          type="file" 
+          id="adopterPhoto" 
+          accept="image/*"
+          onchange="previewImage(this, 'adoptPreview')"
+          style="padding: 10px; border: 2px dashed #667eea; border-radius: 8px;"
+        >
+        <img id="adoptPreview" class="image-preview">
+        
+        <button type="submit" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          💕 Submit Adoption Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function previewImage(input, previewId) {
+      const preview = document.getElementById(previewId);
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          preview.src = e.target.result;
+          preview.classList.add('show');
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header style="color: white;">🔐 Admin Login Portal</header>
+  <nav>
+    <a href="index.html"><button>Home</button></a>
+    <a href="report.html"><button>Report Injured Dog</button></a>
+    <a href="ngos.html"><button>NGOs</button></a>
+    <a href="admin-login.html"><button>Admin Login</button></a>
+  </nav>
+
+  <div class="container" style="max-width: 500px;">
+    <div class="card" style="background:transparent; color: white;">
+      <h2 style="text-align: center; color: white; margin-bottom: 30px;">Admin Access</h2>
+      <form id="loginForm" style="gap: 20px;">
+        <div style="position: relative;">
+          <label style="display: block; margin-bottom: 8px; font-weight: bold;">👤 Username</label>
+          <input 
+            id="username" 
+            placeholder="Enter username" 
+            required
+            style="background: rgba(255,255,255,0.9); border: none; color: #333;"
+          >
+        </div>
+        
+        <div style="position: relative;">
+          <label style="display: block; margin-bottom: 8px; font-weight: bold;">🔑 Password</label>
+          <input 
+            id="password" 
+            type="password" 
+            placeholder="Enter password" 
+            required
+            style="background: rgba(255,255,255,0.9); border: none; color: #333;"
+          >
+        </div>
+        
+        <button type="submit" style="background: linear-gradient(135deg, #ffd60a 0%, #ffc300 100%); color: #333; font-weight: bold; margin-top: 20px;">
+          🔓 Login
+        </button>
+      </form>
+    </div>
+    
+    <p style="text-align: center; color: white; margin-top: 20px; font-size: 14px;">
+      Admin credentials required to access the management panel
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

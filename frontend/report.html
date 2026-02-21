@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Injured Dog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header style="color: white;">📋 Report Injured Dog</header>
+  <nav>
+    <a href="index.html"><button>Home</button></a>
+    <a href="report.html"><button>Report Injured Dog</button></a>
+    <a href="ngos.html"><button>NGOs</button></a>
+    <a href="admin-login.html"><button>Admin Login</button></a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h3>Submit an Injury Report</h3>
+      <form id="reportForm">
+        <input name="name" placeholder="Your Name" required>
+        <input name="location" placeholder="Location (Where is the dog?)" required>
+        <textarea name="details" placeholder="Describe the injury and condition..." required></textarea>
+        
+        <label style="font-weight: bold; color: white;">📸 Upload Photo of the Dog:</label>
+        <input 
+          type="file" 
+          id="dogPhoto" 
+          name="photo" 
+          accept="image/*"
+          onchange="previewImage(this, 'reportPreview')"
+          style="padding: 10px; border: 2px dashed #667eea; border-radius: 8px;"
+        >
+        <img id="reportPreview" class="image-preview">
+        
+        <button type="submit" style="background: linear-gradient(135deg, #00d2fc 0%, #3677ff 100%);">
+          📤 Submit Report
+        </button>
+      </form>
+    </div>
+
+    <div class="card" style="color: #fcf9f9;">
+      <h3 style="color: white; border-bottom: 2px solid #ffd60a;">Recent Reports</h3>
+      <ul id="reportList"></ul>
+    </div>
+  </div>
+
+  <!-- Report Details Modal -->
+  <div id="reportModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeReportModal()">&times;</span>
+      <h2 id="modalTitle">Report Details</h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+
+
+
+
+
+
+</body>
+</html>
