@@ -110,7 +110,7 @@ Admin dashboard for managing rescue reports and updating case status.
 ---
 
 ## 🏗️ System Architecture  
-
+![Flowchart](images/flowchart.drawio.png)
 The system begins when a user accesses the website and chooses an action such as reporting an injured dog or submitting an adoption request.  
 
 The frontend collects user data and sends it to the backend server through API requests. The backend processes the request using Express.js and stores the data in MongoDB.  
